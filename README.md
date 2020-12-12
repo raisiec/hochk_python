@@ -2,4 +2,4 @@
 https://fb.watch/2jWPlyYu5c/
 
 # Registration
-https://www.meetup.com/Hong-Kong-Hour.../events/275020437/
+https://www.meetup.com/Hong-Kong-Hour-of-Code-Meetup-Group/events/275020437/
