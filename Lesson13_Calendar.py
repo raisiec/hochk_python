@@ -20,15 +20,10 @@ def get_events():
 
 # To compare the difference between two given dates
 def between_days(date1, date2):
-  # date 1 - date 2 = how many days in between?
-  #print(type(date1), type(date2))
-  print('A', date1 - date2)
-
   time_between = str(date1 - date2)
-  print('B', time_between)
-
   number_of_days = time_between.split(' ')
-  print('[0]:', number_of_days[0], '[1]:', number_of_days[1], '[2]:', number_of_days[2])
+  #print('[0]:', number_of_days[0], '[1]:', number_of_days[1], '[2]:', number_of_days[2])
+  return number_of_days[0]
 
 # Create a Canvas for display      
 root = Tk()
@@ -43,9 +38,16 @@ events = get_events()
 # create a datetime object for comparison
 today = date.today()
 
+vertical_position = 100
+
 # looping the items in events list
 for event in events:
   event_name = event[0]
   event_date = event[1]
-  #print(event_name, event_date)
   days_until = between_days(event_date, today)
+  print('The days until: ', days_until)
+
+  display = 'It is %s days until %s' % (days_until, event_name)
+  c.create_text(150, vertical_position, text=display)
+
+  vertical_position = vertical_position + 30
