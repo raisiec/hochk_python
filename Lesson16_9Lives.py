@@ -8,17 +8,23 @@ import random
 # Define program parameters
 lives = 9
 heart_symbol = u'\u2764'
+clue = list('***')
 
 words = ['eel', 'cat', 'sos', 'shy', 'fun', 'fan', 'kid', 'zoo', 'egg', 'fat']
 secret_word = random.choice(words)
 
 # Main Loop
 while lives > 0:
+  print(clue)
   print('Lives left: ' + heart_symbol * lives)
 
   # Get user input
   guess = input('Guess A Word: ')
   print('user input: ' + guess)
+
+  # If guess inside secret word, update clue
+  if guess in secret_word:
+    print('\nI am going to update the clue!\n')
   
   # Check if the answer is correct
   if guess == secret_word:
