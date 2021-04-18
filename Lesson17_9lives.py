@@ -41,7 +41,7 @@ while lives > 0:
     update_clue(guess, secret_word, clue)
   
   # Check if the answer is correct
-  if guess == secret_word:
+  if guess.lower() == secret_word.lower():
     print('You are correct! Bingo!')
     break
   else:
