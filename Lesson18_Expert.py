@@ -6,12 +6,24 @@ from tkinter import Tk, simpledialog, messagebox
 
 print('Ask The Expert - Capital City of The World')
 
+# This function handles the file reading from a data file
+def read_from_file():
+  with open('Capital_City.txt') as file:
+    for line in file:
+      print(line)
+      line = line.rstrip('\n')
+      print(line)
+
 root = Tk()
 root.withdraw()
+the_world = {}
+
+read_from_file()
+
+print(the_world)
 
 while True:
   query_country = simpledialog.askstring('Country', 'Type The Name of a Country:')
 
   # How to print the user input data to your console?
-
-  
+  print(query_country)
