@@ -10,9 +10,10 @@ print('Ask The Expert - Capital City of The World')
 def read_from_file():
   with open('Capital_City.txt') as file:
     for line in file:
-      print(line)
       line = line.rstrip('\n')
-      print(line)
+      country, city = line.split('/')
+      print(country, city)
+      the_world[country] = city
 
 root = Tk()
 root.withdraw()
@@ -27,3 +28,5 @@ while True:
 
   # How to print the user input data to your console?
   print(query_country)
+
+# End of Program
