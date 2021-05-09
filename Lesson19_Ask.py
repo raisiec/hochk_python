@@ -1,6 +1,7 @@
 # Hour of Code - Ask Expert
 # Author: Raisie
-# Date: May 2, 2021
+# Date: May 2, 2021 v1
+#       May 9, 2021 v2
 
 from tkinter import Tk, simpledialog, messagebox
 
@@ -19,6 +20,13 @@ root.withdraw()
 the_world = {}
 
 read_from_file()
+
+def write_to_file():
+  with open('mother.txt', 'a') as file:
+    for i in range(100000):
+      file.write('Happy Mother\'s Day!')
+
+write_to_file()
 
 while True:
   query_country = simpledialog.askstring('Country', 'Type The Name of a Country:')
