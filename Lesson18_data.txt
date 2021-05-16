@@ -1,1 +1,24 @@
-
+Japan/Tokyo
+India/New Dehli
+Thailand/Bangkok
+UK/London
+Great Britain/London
+England/London
+United Kingdom/London
+GB/London
+France/Paris
+Germany/Berlin
+Deutschland/Berlin
+Portugal/Lisbon
+Argentina/Buenos Aires
+Korea/Seoul
+China/Beijing
+USA/Washington D.C.
+America/Wasington D.C.
+United States of America/Washington D.C.
+The United States/Washington D.C.
+United States/Washington D.C.
+Italy/Rome
+Australia/Sydney
+New Zealand/Wellington
+Fiji/Suva
