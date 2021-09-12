@@ -12,8 +12,8 @@ cater.color('red')
 cater.speed(2)
 cater.penup()
 
-while True:
-  cater.forward(1)
+#while True:
+#  cater.forward(1)
 
 # Create the Leaf object
 leaf = t.Turtle()
@@ -55,7 +55,7 @@ def place_leaf():
 
 # The following 4 functions will control the movement of the snake
 def move_up():
-  pass
+  cater.setheading(90)
 
 def move_down():
   pass
@@ -69,3 +69,9 @@ def move_right():
 # The following function will be executed when the game is ready to start
 def start_game():
   pass
+
+# Respond to the keyboard input from the player
+t.onkey(start_game,'space')
+t.onkey(move_up, 'Up')
+t.listen()
+t.mainloop()
