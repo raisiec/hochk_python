@@ -76,10 +76,22 @@ def move_right():
 def start_game():
 
   text.clear()
+  c_speed = 0.5
+  c_length = 2
+  c.shapesize(1,c_length,1)
+
+  # Snake eating the leaf -> longer
+
   place_leaf()
 
   while True:
-    c.forward(0.5)
+    c.forward(c_speed)
+    if c.distance(leaf) < 20:
+      place_leaf()
+      c_length = c_length + 1
+      c.shapesize(1, c_length, 1)
+      c_speed = c_speed + 0.5
+
 
 # Respond to the keyboard input from the player
 t.onkey(start_game,'space')
